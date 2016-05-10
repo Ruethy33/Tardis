@@ -25,6 +25,7 @@ public class TardisItems extends JFrame
 		tardis.add(new Tardis("Gallifrey", "Kasterborous Galaxy", "Time Lords", 12000, 25000000, 2016));
 		tardis.add(new Tardis("Apalapucia", "Hubstrota Galaxy", "Apalapucians", 87, 752890, 5690));
 		tardis.add(new Tardis("New Earth", "Galaxy m87", "Humans", 346, 854678, 500000023));
+		tardis.add(new Tardis("Earth", "Milky Galaxy", "Humans", 300000, 3, 345));
 		}
 	
 	public static void doIntro()
@@ -133,19 +134,32 @@ public class TardisItems extends JFrame
 				System.out.println("This must be what is messing with the sky!!!");
 				System.out.println("You see, this vortex manipulator is continuously sending messages to the clouds wanted to get out of this time zone.");
 				System.out.println("If I can just find a way to cut off this signal, I think I would be able to fix the sky!");
-				System.out.println("I can't find a way to stop it, would you like to try?");
-				System.out.println("1) Yes");
-				System.out.println("2) No");
-				int answer = userInput.nextInt();
-			
-				if(answer == 1)
+				
+				final String[] choice = { "OH HECK YES!!", "You should try again"};
+
 					{
-					System.out.println("Oh my goodness!! You got it! Nice job!");
-					}
-				else if(answer == 2)
-					{
-					System.out.println("Alright, I'll try again.");
-					System.out.println("There we go. I stopped it.");
+					final JFrame frame = new JFrame();
+				    String decision = (String) JOptionPane.showInputDialog(frame, 
+				            "I can't find a way to stop it, would you like to try?",
+				            "Your Choice",
+				            JOptionPane.QUESTION_MESSAGE, 
+				            null, 
+				            choice, 
+				            choice[0]);
+				    
+				    switch(decision)
+				    	{
+				    	case "OH HECK YES!!":
+				    		{
+							    JOptionPane.showMessageDialog(frame, "Wow! look at that! you cut off the signal!");
+				    		}
+				    	
+				    	case "You should try again":
+				    		{
+							    JOptionPane.showMessageDialog(frame, "Okay. I think I got it!");		
+				    		}
+				    		
+				    	}
 					}
 				
 				System.out.println();
@@ -186,24 +200,38 @@ public class TardisItems extends JFrame
 				System.out.println("I fought this species once. They were trying to control all of the plastic in London. I destroyed them.");
 				System.out.println("Lets go underground, that's usually where they live.");
 				System.out.println();
-				System.out.println("Look! Over there! It's the Nestene Monster!Q We have to talk him into leaving, and that will make the ground much happier..");
-				System.out.println("Would you like to try and convince him?");
-				System.out.println("1) Yes");
-				System.out.println("2) No");
-			
-				int answer = userInput.nextInt();
-				if(answer == 1)
+				System.out.println("Look! Over there! It's the Nestene Monster! We have to talk him into leaving, and that will make the ground much happier..");
+				
+				final String[] choice = { "Yeah, sure.", "Nah, i'll let you take this one"};
+
 					{
-					System.out.println("Wow, how did you do that? He's leaving the atmosphere now.");
-					}
-				else if(answer == 2)
-					{
-					System.out.println("Alright, I'll Try.");
-					System.out.println("I convinced him to leave. he's leaving the atmosphere now.");
+					final JFrame frame = new JFrame();
+				    String decision = (String) JOptionPane.showInputDialog(frame, 
+				            "Would you like to try and convince him?",
+				            "Your Choice",
+				            JOptionPane.QUESTION_MESSAGE, 
+				            null, 
+				            choice, 
+				            choice[0]);
+				    
+				    switch(decision)
+			    	{
+			    	case "Yeah, sure.":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Wow! look at that! you convinced him to leave!");
+			    		}
+			    	
+			    	case "Nah, i'll let you take this one":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Okay. I'll do it");		
+						    JOptionPane.showMessageDialog(frame, "I convinved him to leave!");		
+			    		}
+			    		
+			    	}
 					}
 				
 				System.out.println();
-				System.out.println("And look at that. The sky is going back to normal.");
+				System.out.println("And look at that. The ground is going back to normal.");
 				System.out.println("Thank you for coming with me, I'll take you back home now.");
 				
 				doRepeat();	
@@ -245,20 +273,38 @@ public class TardisItems extends JFrame
 				System.out.println("I think the mayor is under someone else's control, because why else would he enslave his own people?!");
 				System.out.println("Let's go back to the TARDIS and see if there are any other aliens besides us here.");
 				System.out.println();
-				System.out.println("And look at that. There is. It says there is a Sontaran ship in the atmosphere. If we can just get rid of them, we can fix this town.");
+				System.out.println("And look at that. There is. It says there is a Sontaran ship in the atmosphere.");
 				System.out.println("Would you lke to try and convice them to leave, or would you like me to?");
-				System.out.println("1) Me");
-				System.out.println("2) You");
-				
-				int answer = userInput.nextInt();
-				if(answer == 1)
+			
+				final String[] choice = { "You convince them", "I'll convince them"};
+
 					{
-					System.out.println("Wow! Good job! You convinced them to leave! You saved the Town!");
+					final JFrame frame = new JFrame();
+				    String decision = (String) JOptionPane.showInputDialog(frame, 
+				            "Would you lke to try and convice them to leave, or would you like me to?",
+				            "Your Choice",
+				            JOptionPane.QUESTION_MESSAGE, 
+				            null, 
+				            choice, 
+				            choice[0]);
+				    
+				    switch(decision)
+			    	{
+			    	case "You convinve them":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Wow! look at that! you convinced them to leave!");
+			    		}
+			    	
+			    	case "I'll convince them":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Okay. I'll do it");		
+						    JOptionPane.showMessageDialog(frame, "I convinved them to leave!");		
+			    		}
+			    		
+			    	}
 					}
-				else if(answer == 2)
-					{
-					System.out.println("I convinced them to leave. They will not enslave the townspeople.");
-					}
+					
+				System.out.println("And look at that! they're leaving!");
 				
 				System.out.println();
 				System.out.println("Thank you for coming with me, I'll take you back home now.");
@@ -307,17 +353,97 @@ public class TardisItems extends JFrame
 
 					{
 					final JFrame frame = new JFrame();
-				    String decicion = (String) JOptionPane.showInputDialog(frame, 
+				    String decision = (String) JOptionPane.showInputDialog(frame, 
 				            "Which would you like to do?",
+				            "Your Choice",
+				            JOptionPane.QUESTION_MESSAGE, 
+				            null, 
+				            choice, 
+				            choice[0]);
+				    
+				    switch(decision)
+			    	{
+			    	case "Distract him":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Okay, Keep him busy. Run when you hear a bang!");
+			    		}
+			    	
+			    	case "Destroy the ship":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Okay. Go Bang on things and hope for the best. That's what I do.");
+			    		}
+			    		
+			    	}
+					}
+				
+				System.out.println("The ship blew up. This planet will now live a long and happy life.");
+				
+				System.out.println();
+				System.out.println("Thank you for coming with me, I'll take you back home now.");
+				
+				doRepeat();
+				break;
+				}
+			case 5:
+				{
+				System.out.println();
+				System.out.println("We have landed on " + tardis.get(4).getPlanet() + " in the " + tardis.get(4).getLocation() + ".");
+				System.out.println("The race is the " + tardis.get(4).getRace() + " With a population of " + tardis.get(4).getPopulation() + ".");
+				System.out.println("This planet is " + tardis.get(4).getPlanetAge() + " years old. We are in the year " + tardis.get(4).getTime() + ".");
+				System.out.println();
+				
+				System.out.println("There is a problem here. there should only be a population of 2... us");
+				System.out.println("But there is one other life form here that shouldn't even be existing yet.");
+				System.out.println("There must be something wrong with the time vortex.. it must've pulled a life form to here by accident.");
+				System.out.println("We have to find it and return it to it's natural place in time.");
+				
+				final String[] genre = { "Left", "Right"};
+
+					{
+					final JFrame frame = new JFrame();
+				    String decicion = (String) JOptionPane.showInputDialog(frame, 
+				            "Should we go Left or Right?",
 				            "Your Choice",
 				            JOptionPane.QUESTION_MESSAGE, 
 				            null, 
 				            genre, 
 				            genre[0]);
-				    JOptionPane.showMessageDialog(frame, "Good choice.");
+				    JOptionPane.showMessageDialog(frame, "Good choice. Let's go.");
 					}
 				
-				System.out.println("The ship blew up. This planet will now live a long and happy life.");
+				System.out.println();
+				System.out.println("Look!! That's a cow... but why is it in the 3rd year of Earth's existence? it's still forming.");
+				System.out.println("We have to capture the cow and get it to the TARDIS before it suffocates in this atmosphere.");
+				
+				final String[] choice = { "You", "me"};
+
+					{
+					final JFrame frame = new JFrame();
+				    String decision = (String) JOptionPane.showInputDialog(frame, 
+				            "Would you like to corral him, or should I?",
+				            "Your Choice",
+				            JOptionPane.QUESTION_MESSAGE, 
+				            null, 
+				            choice, 
+				            choice[1]);
+				    
+				    switch(decision)
+			    	{
+			    	case "You":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Okay, Distract him and I will grab him.");
+			    		}
+			    	
+			    	case "Me":
+			    		{
+						    JOptionPane.showMessageDialog(frame, "Okay. I'll distract him and you just grab him.");
+			    		}
+			    		
+			    	}
+					}
+					
+				System.out.println();
+				System.out.println("Wow, I can't believe we actually pulled this off. Lets get him home.");
 				
 				System.out.println();
 				System.out.println("Thank you for coming with me, I'll take you back home now.");
