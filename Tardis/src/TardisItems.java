@@ -35,6 +35,7 @@ public class TardisItems extends JFrame
 		JOptionPane.showMessageDialog(frame, "Nice to meet you, " + name);
 			System.out.println("You are standing in the Tardis right now. It stands for Time and Relative Dimension in Space.");
 			System.out.println("It's my time machine & spaceship.");
+			
 			Object[] options = {"Yes", "No"};
 			className = JOptionPane.showOptionDialog(frame, "Would you like to fly away with me?",
 					"Your Answer",
@@ -460,6 +461,7 @@ public class TardisItems extends JFrame
 			System.out.println("We are back where we first left, 3 minutes after we left.");
 			System.out.println("I had fun with you. Would you like to come on another adventure?");
 			System.out.println();
+			
 			Object[] options = {"Yes", "No"};
 			className = JOptionPane.showOptionDialog(frame, "Would you like to fly away with me?",
 					"Your Answer",
@@ -476,8 +478,29 @@ public class TardisItems extends JFrame
 					break;
 					}
 				case 1:
-					{
-					JOptionPane.showMessageDialog(frame, "That's sad to hear. You have a good life now because you are fantastic. Absolutely fantastic.");
+					{					
+					Object[] choice = {"Yeah, why not?", "Nah, I'm good"};
+					className = JOptionPane.showOptionDialog(frame, "Would you like to play a game with me before you go??",
+							"Your Answer",
+							JOptionPane.YES_NO_CANCEL_OPTION,
+							JOptionPane.QUESTION_MESSAGE,
+							null, choice, choice[0]);
+					 
+					switch(className)
+						{
+						case 0:
+							{
+							JOptionPane.showMessageDialog(frame, "I'm so happy to hear that.");
+							TardisGame.gameIntro();
+							break;
+							}
+						case 1:
+							{
+							JOptionPane.showMessageDialog(frame, "That's sad to hear. You have a good life now because you are fantastic. Absolutely fantastic.");
+							System.exit(0);
+							}
+						}
+					
 					System.exit(0);
 					}
 				}
