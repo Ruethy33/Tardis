@@ -32,10 +32,9 @@ public class TardisItems extends JFrame
 		{
 		Scanner userInput = new Scanner(System.in);
 		name = JOptionPane.showInputDialog("Hello there. I'm the Doctor. What is your name?");  
-		JOptionPane.showMessageDialog(frame, "Nice to meet you, " + name);
-			System.out.println("You are standing in the Tardis right now. It stands for Time and Relative Dimension in Space.");
-			System.out.println("It's my time machine & spaceship.");
-			
+		JOptionPane.showMessageDialog(frame, "Nice to meet you, " + name); 
+		JOptionPane.showMessageDialog(frame, "You are standing in the Tardis right now. It stands for Time and Relative Dimension in Space. \n It's my time machine & spaceship."); 
+
 			Object[] options = {"Yes", "No"};
 			className = JOptionPane.showOptionDialog(frame, "Would you like to fly away with me?",
 					"Your Answer",
@@ -57,10 +56,7 @@ public class TardisItems extends JFrame
 					System.exit(0);
 					}
 				}
-		System.out.println();
-		System.out.println("There are two buttons and two levers in front of you.");
-		System.out.println("The right and left levers control when we go.");
-		System.out.println("The red and blue buttons control where we go.");
+		JOptionPane.showMessageDialog(frame, "There are two buttons and two levers in front of you. \n The right and left levers control when we go. \n The red and blue buttons control where we go.");
 		Object[] leversAndButtons = {"Left/Red", "Right/Red", "Left/Blue", "Right/Red"};
 		className = JOptionPane.showOptionDialog(frame, "Pick a combination of a lever and a button to pull and press.",
 				"Levers and Buttons",
@@ -108,15 +104,9 @@ public class TardisItems extends JFrame
 			{
 			case 1:
 				{
-				System.out.println();
-				System.out.println("We have landed on " + tardis.get(0).getPlanet() + " in the " + tardis.get(0).getLocation() + ".");
-				System.out.println("The race is the " + tardis.get(0).getRace() + " With a population of " + tardis.get(0).getPopulation() + ".");
-				System.out.println("This planet is " + tardis.get(0).getPlanetAge() + " years old. We are in the year " + tardis.get(0).getTime() + ".");
-				System.out.println();
-				
-				System.out.println("There seems to be something wrong with the sky... I've never seen it so dark and gloomy.");
-				System.out.println("We have to go find out what the problem is here.");
-			
+				JOptionPane.showMessageDialog(frame, "We have landed on " + tardis.get(0).getPlanet() + " in the " + tardis.get(0).getLocation() + ". \n The race is the " + tardis.get(0).getRace() + " With a population of " + tardis.get(0).getPopulation() + ". \n This planet is " + tardis.get(0).getPlanetAge() + " years old. We are in the year " + tardis.get(0).getTime() + "." ); 
+				JOptionPane.showMessageDialog(frame, "There seems to be something wrong with the sky... I've never seen it so dark and gloomy. \n We have to go find out what the problem is here.");
+
 				final String[] genre = { "Left", "Right"};
 
 					{
@@ -130,12 +120,9 @@ public class TardisItems extends JFrame
 				            genre[0]);
 				    JOptionPane.showMessageDialog(frame, "Good choice. Let's go.");	
 					}
-				
-				System.out.println("Look what I found! It seems to be a Vortex Manipulator... Why would it be here?");
-				System.out.println("This must be what is messing with the sky!!!");
-				System.out.println("You see, this vortex manipulator is continuously sending messages to the clouds wanted to get out of this time zone.");
-				System.out.println("If I can just find a way to cut off this signal, I think I would be able to fix the sky!");
-				
+					
+				JOptionPane.showMessageDialog(frame, "Look what I found! It seems to be a Vortex Manipulator... Why would it be here? \n This must be what is messing with the sky!!! \n You see, this vortex manipulator is continuously sending messages to the clouds wanted to get out of this time zone. \n If I can just find a way to cut off this signal, I think I would be able to fix the sky.");
+
 				final String[] choice = { "OH HECK YES!!", "You should try again"};
 
 					{
@@ -162,10 +149,7 @@ public class TardisItems extends JFrame
 				    		
 				    	}
 					}
-				
-				System.out.println();
-				System.out.println("And look at that. The sky is going back to normal.");
-				System.out.println("Thank you for coming with me, I'll take you back home now.");
+				JOptionPane.showMessageDialog(frame, "And look at that. The sky is going back to normal. \n Thank you for coming with me, I'll take you back home now.");
 				
 				doRepeat();
 				break;
@@ -174,15 +158,9 @@ public class TardisItems extends JFrame
 			
 			case 2:
 				{
-				System.out.println();
-				System.out.println("We have landed on " + tardis.get(1).getPlanet() + " in the " + tardis.get(1).getLocation() + ".");
-				System.out.println("The race is the " + tardis.get(1).getRace() + " With a population of " + tardis.get(1).getPopulation() + ".");
-				System.out.println("This planet is " + tardis.get(1).getPlanetAge() + " years old. We are in the year " + tardis.get(1).getTime() + ".");
-				System.out.println();
-				
-				System.out.println("There seems to be something wrong with the ground. It feels so angry.");
-				System.out.println("We have to go find out what the problem is here.");
-			
+					JOptionPane.showMessageDialog(frame, "We have landed on " + tardis.get(1).getPlanet() + " in the " + tardis.get(1).getLocation() + ". \n The race is the " + tardis.get(1).getRace() + " With a population of " + tardis.get(1).getPopulation() + ". \n This planet is " + tardis.get(1).getPlanetAge() + " years old. We are in the year " + tardis.get(1).getTime() + "." ); 
+					JOptionPane.showMessageDialog(frame, "There seems to be something wrong with the ground. It feels so angry. \n We have to go find out what the problem is here.");
+
 				final String[] genre = { "Left", "Right"};
 
 					{
@@ -196,13 +174,11 @@ public class TardisItems extends JFrame
 				            genre[0]);
 				    JOptionPane.showMessageDialog(frame, "Good choice. Let's go.");
 					}
-				
-				System.out.println("Look! Over there! It seems to be slime of some sort... tastes like Nestene Slime.");
-				System.out.println("I fought this species once. They were trying to control all of the plastic in London. I destroyed them.");
-				System.out.println("Lets go underground, that's usually where they live.");
-				System.out.println();
-				System.out.println("Look! Over there! It's the Nestene Monster! We have to talk him into leaving, and that will make the ground much happier..");
-				
+				    
+				JOptionPane.showMessageDialog(frame, "Look! Over there! It seems to be slime of some sort... tastes like Nestene Slime. \n I fought this species once. They were trying to control all of the plastic in London. I destroyed them. \n Lets go underground, that's usually where they live.");
+
+			    JOptionPane.showMessageDialog(frame, "Look! Over there! It's the Nestene Monster! We have to talk him into leaving, and that will make the ground much happier..");
+			    
 				final String[] choice = { "Yeah, sure.", "Nah, i'll let you take this one"};
 
 					{
@@ -230,11 +206,8 @@ public class TardisItems extends JFrame
 			    		
 			    	}
 					}
-				
-				System.out.println();
-				System.out.println("And look at that. The ground is going back to normal.");
-				System.out.println("Thank you for coming with me, I'll take you back home now.");
-				
+				    JOptionPane.showMessageDialog(frame, "And look at that. The ground is going back to normal. \n Thank you for coming with me, I'll take you back home now.");		
+
 				doRepeat();	
 				break;
 				}
@@ -242,15 +215,9 @@ public class TardisItems extends JFrame
 			
 			case 3:
 				{
-				System.out.println();
-				System.out.println("We have landed on " + tardis.get(2).getPlanet() + " in the " + tardis.get(2).getLocation() + ".");
-				System.out.println("The race is the " + tardis.get(2).getRace() + " With a population of " + tardis.get(2).getPopulation() + ".");
-				System.out.println("This planet is " + tardis.get(2).getPlanetAge() + " years old. We are in the year " + tardis.get(2).getTime() + ".");
-				System.out.println();
-				
-				System.out.println("There seems to be something wrong with the city over there. I hear such chaos.");
-				System.out.println("We have to go find out what the problem is here.");
-			
+				JOptionPane.showMessageDialog(frame, "We have landed on " + tardis.get(2).getPlanet() + " in the " + tardis.get(2).getLocation() + ". \n The race is the " + tardis.get(2).getRace() + " With a population of " + tardis.get(2).getPopulation() + ". \n This planet is " + tardis.get(2).getPlanetAge() + " years old. We are in the year " + tardis.get(2).getTime() + "." ); 
+				JOptionPane.showMessageDialog(frame, "There seems to be something wrong with the city over there. I hear such chaos. \n We have to go find out what the problem is here.");
+
 				final String[] genre = { "Left", "Right"};
 
 					{
@@ -264,19 +231,11 @@ public class TardisItems extends JFrame
 				            genre[0]);
 				    JOptionPane.showMessageDialog(frame, "Good choice. Let's go.");
 					}
-				
-				System.out.println("Look! Over there! There seems to be a riot! Let's go find out why!");
-				System.out.println("Excuse me sir! What's with all the chaos?");
-				System.out.println("Townsman: \"The mayor has declared that we will no longer be free, but enslaved!!\"");
-				System.out.println("What?! That's crazy! He can't do that!");
-				System.out.println("Come on, " + name + " we have to go fix this.");
-				System.out.println();
-				System.out.println("I think the mayor is under someone else's control, because why else would he enslave his own people?!");
-				System.out.println("Let's go back to the TARDIS and see if there are any other aliens besides us here.");
-				System.out.println();
-				System.out.println("And look at that. There is. It says there is a Sontaran ship in the atmosphere.");
-				System.out.println("Would you lke to try and convice them to leave, or would you like me to?");
-			
+				    
+				JOptionPane.showMessageDialog(frame, "Look! Over there! There seems to be a riot! Let's go find out why! \n Excuse me sir! What's with all the chaos? \n Townsman: \"The mayor has declared that we will no longer be free, but enslaved!!\" \n What?! That's crazy! He can't do that! \n Come on, " + name + " we have to go fix this.");
+			    JOptionPane.showMessageDialog(frame, "I think the mayor is under someone else's control, because why else would he enslave his own people?! \n Let's go back to the TARDIS and see if there are any other aliens besides us here.");
+			    JOptionPane.showMessageDialog(frame, "And look at that. There is. It says there is a Sontaran ship in the atmosphere. \n Would you lke to try and convice them to leave, or would you like me to?");
+
 				final String[] choice = { "You convince them", "I'll convince them"};
 
 					{
@@ -304,27 +263,19 @@ public class TardisItems extends JFrame
 			    		
 			    	}
 					}
-					
-				System.out.println("And look at that! they're leaving!");
-				
-				System.out.println();
-				System.out.println("Thank you for coming with me, I'll take you back home now.");
-				
+				    
+				JOptionPane.showMessageDialog(frame, "And look at that! they're leaving!");		
+				JOptionPane.showMessageDialog(frame, "Thank you for coming with me, I'll take you back home now.");		
+
 				doRepeat();
 				break;
 				}
 			
 			case 4:
 				{
-				System.out.println();
-				System.out.println("We have landed on " + tardis.get(3).getPlanet() + " in the " + tardis.get(3).getLocation() + ".");
-				System.out.println("The race is the " + tardis.get(3).getRace() + " With a population of " + tardis.get(3).getPopulation() + ".");
-				System.out.println("This planet is " + tardis.get(3).getPlanetAge() + " years old. We are in the year " + tardis.get(3).getTime() + ".");
-				System.out.println();
-				
-				System.out.println("There seems to be something wrong with the atmosphere. It has a deficiency of oxygen.");
-				System.out.println("We have to go find out what the problem is here.");
-			
+				JOptionPane.showMessageDialog(frame, "We have landed on " + tardis.get(3).getPlanet() + " in the " + tardis.get(3).getLocation() + ". \n The race is the " + tardis.get(3).getRace() + " With a population of " + tardis.get(3).getPopulation() + ". \n This planet is " + tardis.get(3).getPlanetAge() + " years old. We are in the year " + tardis.get(3).getTime() + "." ); 
+				JOptionPane.showMessageDialog(frame, "There seems to be something wrong with theatmosphere. \n We have to go find out what the problem is here.");
+
 				final String[] genre = { "Left", "Right"};
 
 					{
@@ -338,18 +289,11 @@ public class TardisItems extends JFrame
 				            genre[0]);
 				    JOptionPane.showMessageDialog(frame, "Good choice. Let's go.");
 					}				
-				
-				System.out.println("Look! Up There! It looks like a giant spaceship!!");
-				System.out.println("Let's go up there to see what the problem is here.");
-				System.out.println();
-				System.out.println("Hello. I'm the Doctor. What is your name?");
-				System.out.println("Alien: \"My name is General Duchestard of the Galactic Empire.\"");
-				System.out.println("I believe your engines are disrupting the air flow of this planet. Can I ask you to leave?");
-				System.out.println("General: \"No. I am well needed here and I will never leave this planet.\"");
-				System.out.println();
-				System.out.println("We have to destroy his ship's engines or this planet will die of oxygen starvation.");
-				System.out.println("One of us needs to distract him while the other destroyes the engine.");
-				
+				    
+				JOptionPane.showMessageDialog(frame, "Look! Up There! It looks like a giant spaceship!! \n Let's go up there to see what the problem is here.");		
+			    JOptionPane.showMessageDialog(frame, "Hello. I'm the Doctor. What is your name? \n Alien: \"My name is General Duchestard of the Galactic Empire.\" \n I believe your engines are disrupting the air flow of this planet. Can I ask you to leave? \n General: \"No. I am well needed here and I will never leave this planet.\"");		
+			    JOptionPane.showMessageDialog(frame, "We have to destroy his ship's engines or this planet will die of oxygen starvation. \n One of us needs to distract him while the other destroyes the engine.");		
+
 				final String[] choice = { "Distract him", "Destroy the ship"};
 
 					{
@@ -376,28 +320,17 @@ public class TardisItems extends JFrame
 			    		
 			    	}
 					}
-				
-				System.out.println("The ship blew up. This planet will now live a long and happy life.");
-				
-				System.out.println();
-				System.out.println("Thank you for coming with me, I'll take you back home now.");
-				
+				JOptionPane.showMessageDialog(frame, "The ship blew up. This planet will now live a long and happy life.");
+			    JOptionPane.showMessageDialog(frame, "Thank you for coming with me, I'll take you back home now.");
+
 				doRepeat();
 				break;
 				}
 			case 5:
 				{
-				System.out.println();
-				System.out.println("We have landed on " + tardis.get(4).getPlanet() + " in the " + tardis.get(4).getLocation() + ".");
-				System.out.println("The race is the " + tardis.get(4).getRace() + " With a population of " + tardis.get(4).getPopulation() + ".");
-				System.out.println("This planet is " + tardis.get(4).getPlanetAge() + " years old. We are in the year " + tardis.get(4).getTime() + ".");
-				System.out.println();
-				
-				System.out.println("There is a problem here. there should only be a population of 2... us");
-				System.out.println("But there is one other life form here that shouldn't even be existing yet.");
-				System.out.println("There must be something wrong with the time vortex.. it must've pulled a life form to here by accident.");
-				System.out.println("We have to find it and return it to it's natural place in time.");
-				
+				JOptionPane.showMessageDialog(frame, "We have landed on " + tardis.get(4).getPlanet() + " in the " + tardis.get(4).getLocation() + ". \n The race is the " + tardis.get(4).getRace() + " With a population of " + tardis.get(4).getPopulation() + ". \n This planet is " + tardis.get(4).getPlanetAge() + " years old. We are in the year " + tardis.get(4).getTime() + "." ); 
+				JOptionPane.showMessageDialog(frame, "There is a problem here. there should only be a population of 2... us. \n But there is one other life form here that shouldn't even be existing yet. \n There must be something wrong with the time vortex.. it must've pulled a life form to here by accident. \n We have to find it and return it to it's natural place in time.");
+
 				final String[] genre = { "Left", "Right"};
 
 					{
@@ -411,11 +344,9 @@ public class TardisItems extends JFrame
 				            genre[0]);
 				    JOptionPane.showMessageDialog(frame, "Good choice. Let's go.");
 					}
-				
-				System.out.println();
-				System.out.println("Look!! That's a cow... but why is it in the 3rd year of Earth's existence? it's still forming.");
-				System.out.println("We have to capture the cow and get it to the TARDIS before it suffocates in this atmosphere.");
-				
+				    
+				JOptionPane.showMessageDialog(frame, "Look!! That's a cow... but why is it in the 3rd year of Earth's existence? it's still forming. \n We have to capture the cow and get it to the TARDIS before it suffocates in this atmosphere.");
+
 				final String[] choice = { "You", "me"};
 
 					{
@@ -442,13 +373,10 @@ public class TardisItems extends JFrame
 			    		
 			    	}
 					}
-					
-				System.out.println();
-				System.out.println("Wow, I can't believe we actually pulled this off. Lets get him home.");
-				
-				System.out.println();
-				System.out.println("Thank you for coming with me, I'll take you back home now.");
-				
+				    
+				JOptionPane.showMessageDialog(frame, "Wow, I can't believe we actually pulled this off. Lets get him home.");
+				JOptionPane.showMessageDialog(frame, "Thank you for coming with me, I'll take you back home now.");
+
 				doRepeat();
 				break;
 				}
@@ -458,10 +386,8 @@ public class TardisItems extends JFrame
 	
 	public static void doRepeat()
 		{
-			System.out.println("We are back where we first left, 3 minutes after we left.");
-			System.out.println("I had fun with you. Would you like to come on another adventure?");
-			System.out.println();
-			
+			JOptionPane.showMessageDialog(frame, "We are back where we first left, 3 minutes after we left. \n I had fun with you. Would you like to come on another adventure?");
+
 			Object[] options = {"Yes", "No"};
 			className = JOptionPane.showOptionDialog(frame, "Would you like to fly away with me?",
 					"Your Answer",
@@ -482,6 +408,7 @@ public class TardisItems extends JFrame
 					Object[] choice = {"Yeah, why not?", "Nah, I'm good"};
 					className = JOptionPane.showOptionDialog(frame, "Would you like to play a game with me before you go??",
 							"Your Answer",
+							
 							JOptionPane.YES_NO_CANCEL_OPTION,
 							JOptionPane.QUESTION_MESSAGE,
 							null, choice, choice[0]);
@@ -505,9 +432,10 @@ public class TardisItems extends JFrame
 					}
 				}
 		
-		System.out.println("There are two buttons and two levers in front of you.");
-		System.out.println("The right and left levers control when we go.");
-		System.out.println("The red and blue buttons control where we go.");
+		JOptionPane.showMessageDialog(frame, "I'm so happy to hear that.");
+		
+		JOptionPane.showMessageDialog(frame, "There are two buttons and two levers in front of you. \n The right and left levers control when we go. \n The red and blue buttons control where we go.");
+
 		Object[] leversAndButtons = {"Left/Red", "Right/Red", "Left/Blue", "Right/Red"};
 		className = JOptionPane.showOptionDialog(frame, "Pick a combination of a lever and a button to pull and press.",
 				"Levers and Buttons",
